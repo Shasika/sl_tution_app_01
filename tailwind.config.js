@@ -1,4 +1,5 @@
 export default {
+  darkMode: 'class',
   content: [
     './resources/**/*.vue',
     './resources/**/*.js',
