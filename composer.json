@@ -1,0 +1,26 @@
+{
+  "name": "sl/tuition-app",
+  "type": "project",
+  "description": "Sri Lanka Tuition Management System",
+  "require": {
+    "php": "^8.3",
+    "laravel/framework": "^12.0"
+  },
+  "require-dev": {
+    "fakerphp/faker": "^1.23",
+    "phpunit/phpunit": "^11.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  },
+  "scripts": {
+    "post-root-package-install": [
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ],
+    "post-create-project-cmd": [
+      "@php artisan key:generate --ansi"
+    ]
+  }
+}
