@@ -49,14 +49,21 @@ npm run dev
 - `GET /api/subjects` / `POST /api/subjects`
 - `GET /api/courses` / `POST /api/courses`
 - `GET /api/batches` / `POST /api/batches`
+- `GET /api/schedules` / `POST /api/schedules`
 - `GET /api/sessions` / `POST /api/sessions`
 - `GET /api/students` / `POST /api/students`
+- `GET /api/guardians` / `POST /api/guardians`
+- `GET /api/enrollments` / `POST /api/enrollments`
+- `GET /api/users` / `POST /api/users`
 - `GET /api/attendance/sessions/{sessionId}` / `POST /api/attendance`
+- `GET /api/fee-plans` / `POST /api/fee-plans`
 - `GET /api/invoices` / `POST /api/invoices`
 - `GET /api/invoices/{invoiceId}`
 - `GET /api/payments` / `POST /api/payments`
 - `GET /api/exams` / `POST /api/exams`
 - `GET /api/exams/{examId}/marks` / `POST /api/exams/{examId}/marks`
+- `GET /api/notifications` / `POST /api/notifications`
+- `GET /api/audit-logs`
 - `GET /api/reports/collections`
 - `GET /api/reports/arrears`
 - `GET /api/reports/class-performance`
