@@ -31,7 +31,7 @@
         </div>
         <div class="flex items-center gap-2">
           <span class="text-sm text-slate-600">admin@demo.lk</span>
-          <button class="btn-secondary">Logout</button>
+          <button class="btn-secondary" @click="logout">Logout</button>
         </div>
       </header>
       <div class="p-6">
@@ -39,7 +39,16 @@
       </div>
     </main>
   </div>
-</template>
+  </template>
+
+<script setup>
+import { apiClient } from '../composables/useApi';
+
+const logout = async () => {
+  await apiClient('/logout', { method: 'POST' });
+  window.location.href = '/login';
+};
+</script>
 
 <style scoped>
 .sidebar-link {

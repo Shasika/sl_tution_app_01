@@ -46,6 +46,19 @@ class DatabaseSeeder extends Seeder
             'updated_at' => now(),
         ]);
 
+        $adminId = DB::table('users')->insertGetId([
+            'institute_id' => $instituteId,
+            'branch_id' => $branchId,
+            'name' => 'Admin User',
+            'email' => 'admin@demo.lk',
+            'phone' => '077 000 1111',
+            'password' => bcrypt('password'),
+            'role' => 'institute_admin',
+            'status' => 'active',
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+
         $teacherId = DB::table('users')->insertGetId([
             'institute_id' => $instituteId,
             'branch_id' => $branchId,
@@ -64,6 +77,14 @@ class DatabaseSeeder extends Seeder
             ['name' => 'Institute Admin', 'slug' => 'institute_admin', 'created_at' => now(), 'updated_at' => now()],
             ['name' => 'Teacher', 'slug' => 'teacher', 'created_at' => now(), 'updated_at' => now()],
             ['name' => 'Cashier', 'slug' => 'cashier', 'created_at' => now(), 'updated_at' => now()],
+        ]);
+
+        $adminRoleId = DB::table('roles')->where('slug', 'institute_admin')->value('id');
+        DB::table('role_user')->insert([
+            'role_id' => $adminRoleId,
+            'user_id' => $adminId,
+            'created_at' => now(),
+            'updated_at' => now(),
         ]);
 
         $courseId = DB::table('courses')->insertGetId([

@@ -24,6 +24,7 @@ npm run dev
 
 ## Sample Credentials (Seed)
 
+- Admin: `admin@demo.lk` / `password`
 - Teacher: `teacher@demo.lk` / `password`
 
 ## Architecture
@@ -67,6 +68,7 @@ npm run dev
 - `GET /api/reports/collections`
 - `GET /api/reports/arrears`
 - `GET /api/reports/class-performance`
+- `POST /login` / `POST /logout`
 
 ## Notes
 

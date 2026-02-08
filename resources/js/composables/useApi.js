@@ -2,6 +2,7 @@ export const apiClient = async (url, options = {}) => {
   const response = await fetch(url, {
     headers: {
       'Content-Type': 'application/json',
+      'X-Requested-With': 'XMLHttpRequest',
       ...options.headers
     },
     credentials: 'include',
